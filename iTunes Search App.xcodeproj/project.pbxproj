@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F6114916216135A100D23EDD /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6114915216135A100D23EDD /* AppTableViewCell.swift */; };
+		F61149182161384900D23EDD /* AppStoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61149172161384900D23EDD /* AppStoreTableViewController.swift */; };
 		F6F6B045216124410083BFAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6B044216124410083BFAA /* AppDelegate.swift */; };
 		F6F6B04A216124410083BFAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F6B048216124410083BFAA /* Main.storyboard */; };
 		F6F6B04C216124410083BFAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6F6B04B216124410083BFAA /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		F6114915216135A100D23EDD /* AppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
+		F61149172161384900D23EDD /* AppStoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreTableViewController.swift; sourceTree = "<group>"; };
 		F6F6B041216124410083BFAA /* iTunes Search App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Search App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F6B044216124410083BFAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6F6B049216124410083BFAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F61149192161386700D23EDD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F61149172161384900D23EDD /* AppStoreTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		F6F6B038216124410083BFAA = {
 			isa = PBXGroup;
 			children = (
@@ -67,7 +77,7 @@
 				F6F6B064216132190083BFAA /* Views */,
 				F6F6B04B216124410083BFAA /* Assets.xcassets */,
 				F6F6B050216124410083BFAA /* Info.plist */,
-				F6114915216135A100D23EDD /* AppTableViewCell.swift */,
+				F61149192161386700D23EDD /* Controller */,
 			);
 			path = "iTunes Search App";
 			sourceTree = "<group>";
@@ -86,6 +96,7 @@
 		F6F6B064216132190083BFAA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F6114915216135A100D23EDD /* AppTableViewCell.swift */,
 				F6F6B04D216124410083BFAA /* LaunchScreen.storyboard */,
 				F6F6B048216124410083BFAA /* Main.storyboard */,
 			);
@@ -168,6 +179,7 @@
 				F6F6B045216124410083BFAA /* AppDelegate.swift in Sources */,
 				F6F6B05C21612A890083BFAA /* App.swift in Sources */,
 				F6F6B05A216129730083BFAA /* NetworkHandler.swift in Sources */,
+				F61149182161384900D23EDD /* AppStoreTableViewController.swift in Sources */,
 				F6114916216135A100D23EDD /* AppTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
