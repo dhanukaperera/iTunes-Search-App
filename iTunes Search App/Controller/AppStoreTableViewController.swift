@@ -21,7 +21,8 @@ class AppStoreTableViewController: UITableViewController {
         super.viewDidLoad()
         
           fetchApps()
-        
+        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func fetchApps()
