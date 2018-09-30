@@ -12,6 +12,7 @@
 		F6F6B04A216124410083BFAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F6B048216124410083BFAA /* Main.storyboard */; };
 		F6F6B04C216124410083BFAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6F6B04B216124410083BFAA /* Assets.xcassets */; };
 		F6F6B04F216124410083BFAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6F6B04D216124410083BFAA /* LaunchScreen.storyboard */; };
+		F6F6B0582161254C0083BFAA /* iTunesStoreEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6B0572161254C0083BFAA /* iTunesStoreEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F6F6B04B216124410083BFAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6F6B04E216124410083BFAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6F6B050216124410083BFAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6F6B0572161254C0083BFAA /* iTunesStoreEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iTunesStoreEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		F6F6B056216124890083BFAA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F6F6B0572161254C0083BFAA /* iTunesStoreEndpoint.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F6B0582161254C0083BFAA /* iTunesStoreEndpoint.swift in Sources */,
 				F6F6B047216124410083BFAA /* ViewController.swift in Sources */,
 				F6F6B045216124410083BFAA /* AppDelegate.swift in Sources */,
 			);
