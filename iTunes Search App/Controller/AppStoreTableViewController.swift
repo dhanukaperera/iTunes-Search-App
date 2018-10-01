@@ -21,8 +21,9 @@ class AppStoreTableViewController: UITableViewController {
         super.viewDidLoad()
         
           fetchApps()
-        tableView.estimatedRowHeight = tableView.rowHeight
+        tableView.estimatedRowHeight = 124
         tableView.rowHeight = UITableViewAutomaticDimension
+       
     }
     
     func fetchApps()
@@ -30,7 +31,8 @@ class AppStoreTableViewController: UITableViewController {
         appStoreClient.fetchApps(withTerm: "Facebook", inEntity: "software") { (apps) in
             self.apps = apps
             print(self.apps)
-            self.tableView.reloadData()
+            
+             self.tableView.reloadData()
         }
     }
     
