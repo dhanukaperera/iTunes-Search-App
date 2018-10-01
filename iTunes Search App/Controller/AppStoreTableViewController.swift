@@ -28,7 +28,7 @@ class AppStoreTableViewController: UITableViewController {
     
     func fetchApps()
     {
-        appStoreClient.fetchApps(withTerm: "Facebook", inEntity: "software") { (apps) in
+        appStoreClient.fetchApps(withTerm: "Puzzle", inEntity: "software") { (apps) in
             self.apps = apps
             print(self.apps)
             
