@@ -61,4 +61,32 @@ class NetworkHandler {
         dataTask.resume()
     }
     
+    func downloadData(completion: @escaping DataHandler)
+    {
+        let dataTask = session.dataTask(with: self.request) { (data, response, error) in
+            // OFF THE MAIN THREAD
+            // Error: missing http response
+            guard let httpResponse = response as? HTTPURLResponse else {
+                let userInfo = [NSLocalizedDescriptionKey : NSLocalizedString("Missing HTTP Response", comment: "")]
+                let error = NSError(domain: NetworkingErrorDomain, code: MissingHTTPResponseError, userInfo: userInfo)
+                completion(nil, nil, error as Error)
+                return
+            }
+            
+            if data == nil {
+                if let error = error {
+                    completion(nil, httpResponse, error)
+                }
+            } else {
+                switch httpResponse.statusCode {
+                case 200:
+                    completion(data, httpResponse, nil)
+                default:
+                    print("Received HTTP response code: \(httpResponse.statusCode) - was not handled in NetworkProcessing.swift")
+                }
+            }
+        }
+        
+        dataTask.resume()
+    }
 }
