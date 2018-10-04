@@ -31,15 +31,15 @@ class AppStoreTableViewController: UITableViewController {
         navigationItem.searchController = searchController
         definesPresentationContext = true
         
-          fetchApps()
+        fetchApps(searchTerm: "Apple")
         tableView.estimatedRowHeight = 124
         tableView.rowHeight = UITableViewAutomaticDimension
        
     }
     
-    func fetchApps()
+    func fetchApps(searchTerm:String)
     {
-        appStoreClient.fetchApps(withTerm: "Apple", inEntity: "software") { (apps) in
+        appStoreClient.fetchApps(withTerm: searchTerm, inEntity: "software") { (apps) in
             self.apps = apps
             print(self.apps ?? "No data")
             
@@ -72,28 +72,16 @@ class AppStoreTableViewController: UITableViewController {
 
 extension AppStoreTableViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
+    
     func updateSearchResults(for searchController: UISearchController) {
-        // TODO
-        
+
         let searchbarText = searchController.searchBar.text!
         
-       
         if searchbarText.isEmpty {
-            appStoreClient.fetchApps(withTerm: "Apple", inEntity: "software") { (apps) in
-                self.apps = apps
-                print(self.apps ?? "No data")
-                
-                self.tableView.reloadData()
-            }
-        } else{
-            appStoreClient.fetchApps(withTerm: searchbarText, inEntity: "software") { (apps) in
-                self.apps = apps
-                print(self.apps ?? "No data")
-                
-                self.tableView.reloadData()
-            }
+            fetchApps(searchTerm: "Apple")
+        } else {
+            fetchApps(searchTerm: searchbarText)
         }
         
-       
     }
 }
