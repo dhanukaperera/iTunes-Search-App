@@ -10,9 +10,13 @@ import UIKit
 
 class PopUpViewController: UIViewController {
 
+    @IBOutlet weak var label_name: UILabel!
+    var app: App!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(app.name)
+        label_name.text = app.name
         // Do any additional setup after loading the view.
     }
 

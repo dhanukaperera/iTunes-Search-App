@@ -80,43 +80,60 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="iTunes Search" id="i4h-wf-wft"/>
                     <connections>
-                        <segue destination="gTu-hs-d2C" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="yti-po-FtY"/>
+                        <segue destination="gTu-hs-d2C" kind="presentation" identifier="segue1" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="yti-po-FtY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtL-LS-ls0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="300" y="74.212893553223395"/>
         </scene>
-        <!--View Controller-->
+        <!--Pop Up View Controller-->
         <scene sceneID="fGK-sH-D65">
             <objects>
-                <viewController id="gTu-hs-d2C" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopUpViewController" id="gTu-hs-d2C" customClass="PopUpViewController" customModule="iTunes_Search_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aDC-uw-uFv"/>
                         <viewControllerLayoutGuide type="bottom" id="ht6-68-Apq"/>
                     </layoutGuides>
-                    <view key="view" alpha="0.69999999999999996" contentMode="scaleToFill" id="m0B-X3-Fhj">
+                    <view key="view" contentMode="scaleToFill" id="m0B-X3-Fhj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvu-ih-VVU">
-                                <rect key="frame" x="67" y="230" width="240" height="181"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="35" y="196" width="308" height="283"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVx-tf-LEk">
-                                        <rect key="frame" x="-8" y="-6" width="46" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="X"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.17662097835334037" green="0.11228964355934723" blue="0.82925841968911918" alpha="0.37973151408450706" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
-                                            <segue destination="ZTH-zz-zd8" kind="show" id="ist-WM-1Mr"/>
+                                            <segue destination="ZTH-zz-zd8" kind="show" identifier="segiue2" id="ist-WM-1Mr"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wU-5w-QJM">
+                                        <rect key="frame" x="82" y="8" width="144" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="appName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sg-ht-G8q">
+                                        <rect key="frame" x="40" y="113" width="243" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </view>
+                    <connections>
+                        <outlet property="label_name" destination="1Sg-ht-G8q" id="zoN-PJ-nG3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOl-tE-MSY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

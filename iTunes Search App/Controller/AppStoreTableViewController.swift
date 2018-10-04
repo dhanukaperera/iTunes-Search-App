@@ -14,8 +14,8 @@ class AppStoreTableViewController: UITableViewController {
     var appStoreClient = AppStoreClient()
     
     let searchController = UISearchController(searchResultsController: nil)
-    var myIndex = 0
-    
+    var app: App?
+    var myIndex=0;
     
     struct Storyboard {
         static let appCell = "AppCell"
@@ -70,8 +70,16 @@ class AppStoreTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        myIndex = indexPath.row
+        app = apps![indexPath.row]
         performSegue(withIdentifier: "segue1", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "segue1"){
+           //let cell = sender as! AppStoreClient
+            let vc = segue.destination as! PopUpViewController
+            vc.app = app
+        }
     }
 }
 
