@@ -95,7 +95,7 @@
                         <viewControllerLayoutGuide type="top" id="aDC-uw-uFv"/>
                         <viewControllerLayoutGuide type="bottom" id="ht6-68-Apq"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="m0B-X3-Fhj">
+                    <view key="view" alpha="0.80000000000000004" contentMode="scaleToFill" id="m0B-X3-Fhj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
