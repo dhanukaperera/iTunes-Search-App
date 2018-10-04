@@ -13,12 +13,23 @@ class AppStoreTableViewController: UITableViewController {
     var apps: [App]?
     var appStoreClient = AppStoreClient()
     
+    let searchController = UISearchController(searchResultsController: nil)
+    
+    
+    
     struct Storyboard {
         static let appCell = "AppCell"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Setup the Search Controller
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchResultsUpdater = self as UISearchResultsUpdating
+        searchController.obscuresBackgroundDuringPresentation = false
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
         
           fetchApps()
         tableView.estimatedRowHeight = 124
@@ -28,9 +39,9 @@ class AppStoreTableViewController: UITableViewController {
     
     func fetchApps()
     {
-        appStoreClient.fetchApps(withTerm: "Puzzle", inEntity: "software") { (apps) in
+        appStoreClient.fetchApps(withTerm: "Apple", inEntity: "software") { (apps) in
             self.apps = apps
-            print(self.apps)
+            print(self.apps ?? "No data")
             
              self.tableView.reloadData()
         }
@@ -56,5 +67,33 @@ class AppStoreTableViewController: UITableViewController {
         cell.selectionStyle = .none
         
         return cell
+    }
+}
+
+extension AppStoreTableViewController: UISearchResultsUpdating {
+    // MARK: - UISearchResultsUpdating Delegate
+    func updateSearchResults(for searchController: UISearchController) {
+        // TODO
+        
+        let searchbarText = searchController.searchBar.text!
+        
+       
+        if searchbarText.isEmpty {
+            appStoreClient.fetchApps(withTerm: "Apple", inEntity: "software") { (apps) in
+                self.apps = apps
+                print(self.apps ?? "No data")
+                
+                self.tableView.reloadData()
+            }
+        } else{
+            appStoreClient.fetchApps(withTerm: searchbarText, inEntity: "software") { (apps) in
+                self.apps = apps
+                print(self.apps ?? "No data")
+                
+                self.tableView.reloadData()
+            }
+        }
+        
+       
     }
 }
