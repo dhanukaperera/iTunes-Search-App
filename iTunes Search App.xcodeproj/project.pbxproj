@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5E57902216680F600E58879 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E57901216680F600E58879 /* PopUpViewController.swift */; };
 		F6114916216135A100D23EDD /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6114915216135A100D23EDD /* AppTableViewCell.swift */; };
 		F61149182161384900D23EDD /* AppStoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61149172161384900D23EDD /* AppStoreTableViewController.swift */; };
 		F6F6B045216124410083BFAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F6B044216124410083BFAA /* AppDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5E57901216680F600E58879 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		F6114915216135A100D23EDD /* AppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 		F61149172161384900D23EDD /* AppStoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreTableViewController.swift; sourceTree = "<group>"; };
 		F6F6B041216124410083BFAA /* iTunes Search App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iTunes Search App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				F61149172161384900D23EDD /* AppStoreTableViewController.swift */,
+				E5E57901216680F600E58879 /* PopUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				F6F6B05A216129730083BFAA /* NetworkHandler.swift in Sources */,
 				F61149182161384900D23EDD /* AppStoreTableViewController.swift in Sources */,
 				F6114916216135A100D23EDD /* AppTableViewCell.swift in Sources */,
+				E5E57902216680F600E58879 /* PopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,7 +14,7 @@ class AppStoreTableViewController: UITableViewController {
     var appStoreClient = AppStoreClient()
     
     let searchController = UISearchController(searchResultsController: nil)
-    
+    var myIndex = 0
     
     
     struct Storyboard {
@@ -68,7 +68,13 @@ class AppStoreTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "segue1", sender: self)
+    }
 }
+
 
 extension AppStoreTableViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
