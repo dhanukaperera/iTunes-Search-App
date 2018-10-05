@@ -16,6 +16,9 @@ struct App {
     var formattedPrice: String
     var artworkUrl: URL?
     var itunesUrl: URL?
+    var genre: String
+    var artist: String
+    var type: String
     
     private struct APIKeys {
         static let name = "trackName"
@@ -23,6 +26,9 @@ struct App {
         static let description = "description"
         static let formattedPrice = "formattedPrice"
         static let price = "price"
+        static let genre = "primaryGenreName"
+        static let artist = "artistName"
+        static let type = "kind"
     }
     
     init?(dictionary: [String : Any])
@@ -31,7 +37,11 @@ struct App {
             let artworkURLString = dictionary[APIKeys.artworkURL] as? String,
             let description = dictionary[APIKeys.description] as? String,
             let formattedPrice = dictionary[APIKeys.formattedPrice] as? String,
-            let price = dictionary[APIKeys.price] as? Double else {
+            let price = dictionary[APIKeys.price] as? Double,
+            let genre = dictionary[APIKeys.genre] as? String,
+            let artist = dictionary[APIKeys.artist] as? String,
+            let type = dictionary[APIKeys.type] as? String
+        else {
                 return nil
         }
         
@@ -40,5 +50,8 @@ struct App {
         self.description = description
         self.formattedPrice = formattedPrice
         self.price = price
+        self.genre = genre
+        self.artist = artist
+        self.type = type
     }
 }

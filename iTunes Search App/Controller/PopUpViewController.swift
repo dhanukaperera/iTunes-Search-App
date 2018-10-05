@@ -18,14 +18,24 @@ class PopUpViewController: UIViewController {
     @IBOutlet weak var label_genre: UILabel!
     var app: App!
     
+    @IBOutlet weak var btn_price: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(app.name)
-        label_name.text = app.name
-        lable_company.text = app.name
-        label_type.text = app.name
-        label_genre.text = app.name
+        loadDetails()
         // Do any additional setup after loading the view.
+    }
+    
+    func loadDetails(){
+        print(app.genre)
+        label_name.text = app.name
+        lable_company.text = app.artist
+        label_type.text = app.type
+        label_genre.text = app.genre
+        if app.price == 0 {
+            btn_price.setTitle(app.formattedPrice, for: .normal)
+        } else {
+            btn_price.setTitle(String(app.price), for: .normal)
+        }
     }
 
     override func didReceiveMemoryWarning() {
