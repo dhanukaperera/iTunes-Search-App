@@ -80,7 +80,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="iTunes Search" id="i4h-wf-wft"/>
                     <connections>
-                        <segue destination="gTu-hs-d2C" kind="presentation" identifier="segue1" modalPresentationStyle="overFullScreen" modalTransitionStyle="flipHorizontal" id="yti-po-FtY"/>
+                        <segue destination="gTu-hs-d2C" kind="presentation" identifier="segue1" modalPresentationStyle="overFullScreen" modalTransitionStyle="coverVertical" id="yti-po-FtY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtL-LS-ls0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -95,7 +95,7 @@
                         <viewControllerLayoutGuide type="top" id="aDC-uw-uFv"/>
                         <viewControllerLayoutGuide type="bottom" id="ht6-68-Apq"/>
                     </layoutGuides>
-                    <view key="view" alpha="0.80000000000000004" contentMode="scaleToFill" id="m0B-X3-Fhj">
+                    <view key="view" contentMode="scaleToFill" id="m0B-X3-Fhj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -164,7 +164,7 @@
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.528169014084507" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="label_genre" destination="ANm-5x-fp3" id="WGG-Sa-Ma8"/>
