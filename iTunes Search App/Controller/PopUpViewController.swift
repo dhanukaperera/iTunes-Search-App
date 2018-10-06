@@ -10,6 +10,7 @@ import UIKit
 
 class PopUpViewController: UIViewController {
 
+    @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var lable_company: UILabel!
     @IBOutlet weak var label_name: UILabel!
     
@@ -22,11 +23,17 @@ class PopUpViewController: UIViewController {
     @IBOutlet weak var btn_price: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadDetails()
+        popupView.layer.cornerRadius = 20
+        btn_price.layer.borderWidth = 2
+        btn_price.layer.cornerRadius = 10
+        //rgb(26,188,156)
+        btn_price.layer.borderColor = UIColor(red: 84/225, green: 149/255, blue: 251/255, alpha: 1).cgColor
+            loadDetails()
         // Do any additional setup after loading the view.
     }
     
     func loadDetails(){
+        
         print(app.genre)
         label_name.text = app.name
         lable_company.text = app.artist
