@@ -18,6 +18,7 @@ class PopUpViewController: UIViewController {
     @IBOutlet weak var label_genre: UILabel!
     var app: App!
     
+    @IBOutlet weak var appIcon: UIImageView!
     @IBOutlet weak var btn_price: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,24 @@ class PopUpViewController: UIViewController {
             btn_price.setTitle(app.formattedPrice, for: .normal)
         } else {
             btn_price.setTitle(String(app.price), for: .normal)
+        }
+        
+        self.appIcon.image = nil
+        if let url = app.artworkUrl {
+            let request = URLRequest(url: url)
+            let networkHandler = NetworkHandler(request: request)
+            
+            networkHandler.downloadData(completion: { (data, response, error) in
+                // WE'RE OFF THE MAIN QUEUE!!!!!!!!!
+                // WE NEED TO GET BACK ON THE MAIN QUEUE
+                DispatchQueue.main.async {
+                    if let imageData = data {
+                        self.appIcon.image = UIImage(data: imageData)
+                        self.appIcon.layer.cornerRadius = 10.0
+                        self.appIcon.layer.masksToBounds = true
+                    }
+                }
+            })
         }
     }
 
