@@ -25,7 +25,7 @@ class PopUpViewController: UIViewController {
         super.viewDidLoad()
         popupView.layer.cornerRadius = 20
         btn_price.layer.borderWidth = 2
-        btn_price.layer.cornerRadius = 10
+        btn_price.layer.cornerRadius = 6
         //rgb(26,188,156)
         btn_price.layer.borderColor = UIColor(red: 84/225, green: 149/255, blue: 251/255, alpha: 1).cgColor
             loadDetails()
