@@ -42,7 +42,7 @@ class PopUpViewController: UIViewController {
         label_name.text = app.name
         lable_company.text = app.artist
         label_type.text = app.type
-        label_genre.text = app.genre
+        label_genre.text = app.genre.capitalized
         if app.price == 0 {
             btn_price.setTitle(app.formattedPrice, for: .normal)
         } else {
