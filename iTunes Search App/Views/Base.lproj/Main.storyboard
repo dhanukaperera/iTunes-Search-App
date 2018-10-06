@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aDb-1f-DTP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aDb-1f-DTP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -103,15 +103,6 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qvu-ih-VVU">
                                 <rect key="frame" x="62" y="183" width="250" height="300"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVx-tf-LEk">
-                                        <rect key="frame" x="16" y="8" width="30" height="30"/>
-                                        <state key="normal" title="X">
-                                            <color key="titleColor" red="0.17662097835334037" green="0.11228964355934723" blue="0.82925841968911918" alpha="0.37973151408450706" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="closeWindow:" destination="gTu-hs-d2C" eventType="touchUpInside" id="6Wb-49-2Gl"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0wU-5w-QJM">
                                         <rect key="frame" x="65" y="8" width="120" height="120"/>
                                         <constraints>
@@ -169,6 +160,17 @@
                                             <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                     </button>
+                                    <button contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVx-tf-LEk">
+                                        <rect key="frame" x="8" y="8" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.16817036548581779" green="0.15892830235682751" blue="0.98882168531417847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.22823660714285715" green="0.41960784313725491" blue="0.57095424107142856" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="X">
+                                            <color key="titleColor" red="0.042717633929999999" green="0.42025122549999999" blue="0.98431372549999996" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closeWindow:" destination="gTu-hs-d2C" eventType="touchUpInside" id="6Wb-49-2Gl"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -191,6 +193,7 @@
                     </view>
                     <connections>
                         <outlet property="appIcon" destination="0wU-5w-QJM" id="p3K-J8-zKm"/>
+                        <outlet property="btn_close" destination="YVx-tf-LEk" id="Jnh-Mv-2Jl"/>
                         <outlet property="btn_price" destination="mDM-lG-ZgJ" id="1Ln-Yx-bca"/>
                         <outlet property="label_genre" destination="ANm-5x-fp3" id="WGG-Sa-Ma8"/>
                         <outlet property="label_name" destination="1Sg-ht-G8q" id="zoN-PJ-nG3"/>

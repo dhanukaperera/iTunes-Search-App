@@ -10,30 +10,34 @@ import UIKit
 
 class PopUpViewController: UIViewController {
 
+    var app: App!
+    
     @IBOutlet weak var popupView: UIView!
     @IBOutlet weak var lable_company: UILabel!
     @IBOutlet weak var label_name: UILabel!
-    
     @IBOutlet weak var label_type: UILabel!
-    
     @IBOutlet weak var label_genre: UILabel!
-    var app: App!
-    
     @IBOutlet weak var appIcon: UIImageView!
     @IBOutlet weak var btn_price: UIButton!
+    @IBOutlet weak var btn_close: UIButton!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        popupView.layer.cornerRadius = 20
-        btn_price.layer.borderWidth = 2
-        btn_price.layer.cornerRadius = 6
-        //rgb(26,188,156)
-        btn_price.layer.borderColor = UIColor(red: 84/225, green: 149/255, blue: 251/255, alpha: 1).cgColor
-            loadDetails()
+        loadDetails()
+        setLayout()
         // Do any additional setup after loading the view.
     }
     
+    func setLayout(){
+        popupView.layer.cornerRadius = 20
+        btn_price.layer.borderWidth = 2
+        btn_price.layer.cornerRadius = 6
+        btn_price.layer.borderColor = UIColor(red: 84/225, green: 149/255, blue: 251/255, alpha: 1).cgColor
+        btn_close.layer.cornerRadius = 100
+    }
+    
     func loadDetails(){
-        
         print(app.genre)
         label_name.text = app.name
         lable_company.text = app.artist
