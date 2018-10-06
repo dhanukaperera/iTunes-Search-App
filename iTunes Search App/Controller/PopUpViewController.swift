@@ -34,7 +34,7 @@ class PopUpViewController: UIViewController {
         btn_price.layer.borderWidth = 2
         btn_price.layer.cornerRadius = 6
         btn_price.layer.borderColor = UIColor(red: 84/225, green: 149/255, blue: 251/255, alpha: 1).cgColor
-        btn_close.layer.cornerRadius = 100
+        btn_close.layer.cornerRadius = 16
     }
     
     func loadDetails(){
